@@ -1,11 +1,7 @@
 # Pneumonia Detection using CNN 🫁🧠
 
 This project uses a Convolutional Neural Network (CNN) model to detect pneumonia from chest X-ray images. It is designed to assist radiologists and medical professionals in faster and more accurate diagnosis of pneumonia using deep learning techniques.
-
-![Model Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Convolutional_Neural_Network.svg/1280px-Convolutional_Neural_Network.svg.png)
-
 ---
-
 ## 📁 Project Structure
 MINI-PROJECT/
 │
