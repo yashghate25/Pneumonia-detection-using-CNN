@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard - Pneumonia Detection{% endblock %}
+{% block content %}
+<div class="dashboard animate__animated animate__fadeIn">
+  <h2>Welcome, {{ username }}!</h2>
+  <p>Use the menu above to upload X-ray images and get pneumonia predictions.</p>
+  <div class="dashboard-cards">
+    <div class="card animate__animated animate__bounceInLeft">
+      <h3>Upload Images</h3>
+      <p>Upload chest X-ray images to check for pneumonia.</p>
+      <a href="{{ url_for('upload') }}" class="btn-primary">Go to Upload</a>
+    </div>
+    <div class="card animate__animated animate__bounceInRight">
+      <h3>About</h3>
+      <p>This system uses a deep learning CNN model to detect pneumonia from chest X-rays.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

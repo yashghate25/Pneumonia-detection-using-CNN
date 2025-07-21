@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Prediction Result</h2>
+<p><strong>Status:</strong> {{ result }}</p>
+<p><strong>Confidence:</strong> {{ "%.2f"|format(percentage) }}%</p>
+<br/>
+<a href="{{ url_for('upload') }}" class="btn-secondary">Back to Upload</a>
+{% endblock %}

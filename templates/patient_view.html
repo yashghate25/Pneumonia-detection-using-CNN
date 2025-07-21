@@ -1,0 +1,34 @@
+<!-- patients.html -->
+{% extends 'base.html' %}
+{% block title %}Patient Records | PneumoScan{% endblock %}
+{% block content %}
+<h2 class="mb-4">All Patient Scans</h2>
+<table class="table table-hover table-bordered">
+  <thead class="table-primary">
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Prediction</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for patient in patients %}
+    <tr>
+      <td>{{ patient[1] }}</td>
+      <td>
+        <img src="{{ url_for('static', filename='uploads/' + patient[2]) }}" width="80" class="img-thumbnail">
+      </td>
+      <td>
+        {% if patient[3] == 'Pneumonia Detected' %}
+          <span class="badge bg-danger">Pneumonia</span>
+        {% else %}
+          <span class="badge bg-success">Normal</span>
+        {% endif %}
+      </td>
+      <td>{{ patient[4] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
